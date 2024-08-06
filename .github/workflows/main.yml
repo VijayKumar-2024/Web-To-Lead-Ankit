@@ -1,0 +1,22 @@
+name: Deploy to GitHub Pages
+ 
+on:
+  push:
+    branches:
+      - main
+ 
+permissions:
+  id-token: write
+  contents: read  # You may need additional permissions depending on your workflow
+ 
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+        with:
+          token: ${{ secrets.new_token }}
+
+has context menu
