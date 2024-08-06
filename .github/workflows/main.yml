@@ -19,4 +19,4 @@ jobs:
         with:
           token: ${{ secrets.new_token }}
 
-has context menu
+
